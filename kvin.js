@@ -312,8 +312,8 @@ KVIN.prototype.unprepare$object = function unprepare$object (seen, po, position)
     fun.prototype = constructor.prototype;
     console.log("sdfgdfghdf")
     if(constructor.toString().indexOf('VMap') > 0){
-      globalThis.VOYCE.Datastore.Map.apply(globalThis.VOYCE.Datastore, args);
-      return;
+      
+      return globalThis.VOYCE.Datastore.Map.apply(globalThis.VOYCE.Datastore, args);
     }
     return new fun();
   }
