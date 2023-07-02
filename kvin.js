@@ -310,6 +310,9 @@ KVIN.prototype.unprepare$object = function unprepare$object (seen, po, position)
       return constructor.apply(this, args);
     }
     fun.prototype = constructor.prototype;
+    if(typeof constructor == "function"){
+      return constructor(args);
+    }
     return new fun();
   }
   
